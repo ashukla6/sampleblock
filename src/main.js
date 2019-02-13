@@ -3,8 +3,8 @@ require('../node_modules/@salesforce-ux/design-system/assets/styles/salesforce-l
 var SDK = require('blocksdk');
 var sdk = new SDK();
 
-sdk.getContent(function (content)
+sdk.getContent(function (content) 
 {
-	content += '.';
+content += '.';
+sdk.setContent(content);
 });
-
