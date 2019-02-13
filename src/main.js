@@ -4,4 +4,4 @@ var SDK = require('blocksdk');
 var sdk = new SDK();
 
 
-setBlockEditorWidth("500px");
+sdk.setBlockEditorWidth("500px");
