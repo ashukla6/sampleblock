@@ -1,5 +1,9 @@
 
-
+<div id="editor-container">
+  <p>Hello World!</p>
+  <p>Some initial <strong>bold</strong> text</p>
+  <p><br></p>
+</div>
 
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
