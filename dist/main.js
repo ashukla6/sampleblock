@@ -1,4 +1,4 @@
-require("https://cdn.quilljs.com/1.3.6/quill.js");
+
 
 
 /******/ (function(modules) { // webpackBootstrap
