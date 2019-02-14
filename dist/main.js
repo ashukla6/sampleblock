@@ -1,3 +1,5 @@
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -76,6 +78,7 @@ var sdk = new SDK();
 if (window.self === window.top) {
 	document.body.innerText = 'This application is for use in the Salesforce Marketing Cloud Content Builder Editor only.';
 } else {
+	
 		sdk.getContent(function (content) {
 		var quill = new Quill('#editor-container', {
 			theme: 'snow'
