@@ -88,7 +88,7 @@ if (window.self === window.top) {
 		});
 		quill.root.innerHTML = content;
 		function saveText() {
-			var html = quill.getContents();
+			var html = quill.root.innerHTML();
 			sdk.setContent(html);
 			
 
