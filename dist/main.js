@@ -86,6 +86,14 @@ if (window.self === window.top) {
 		});
 		quill.root.innerHTML = content;
 		function saveText() {
+			
+			sdk.getContent(function (content) {
+		var quill = new Quill('#editor-container', {
+			theme: 'snow'
+		});
+		quill.root.innerHTML = content;
+				
+				
 			var html = quill.root.innerHTML;
 			sdk.setContent(html);
 			
