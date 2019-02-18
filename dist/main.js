@@ -76,27 +76,21 @@ var SDK = __webpack_require__(19);
 var sdk = new SDK();
 
 
+
+	
 if (window.self === window.top) {
 	document.body.innerText = 'This application is for use in the Salesforce Marketing Cloud Content Builder Editor only.';
 } else {
-		sdk.setContent("<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>");
-		sdk.getContent(function (content) {
+	
+	sdk.getContent(function (content) {
 		var quill = new Quill('#editor-container', {
 			theme: 'snow'
 		});
 		quill.root.innerHTML = content;
 		function saveText() {
-			
-			sdk.getContent(function (content) {
-		var quill = new Quill('#editor-container', {
-			theme: 'snow'
-		});
-		quill.root.innerHTML = content;
-				
-				
 			var html = quill.root.innerHTML;
 			sdk.setContent(html);
-			
+			sdk.setSuperContent('This is super content: ' + html);
 
 			sdk.getData(function (data) {
 				var numberOfEdits = data.numberOfEdits || 0;
