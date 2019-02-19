@@ -81,13 +81,14 @@ var sdk = new SDK();
 if (window.self === window.top) {
 	document.body.innerText = 'This application is for use in the Salesforce Marketing Cloud Content Builder Editor only.';
 } else {
-	sdk.setContent("<h1>Hello</h1>");
-	sdk.getContent(function (content) {
-		var quill = new Quill('#editor-container', {
+	sdk.setContent("<h1>Hello</h1>", function (content) 
+{
+var quill = new Quill('#editor-container', {
 			theme: 'snow'
 		});
-		quill.root.innerHTML = content;
-		function saveText() {
+
+quill.root.innerHTML = content;
+function saveText() {
 			var html = quill.root.innerHTML;
 			sdk.setContent(html);
 			sdk.setSuperContent('This is super content: ' + html);
@@ -100,7 +101,8 @@ if (window.self === window.top) {
 			});
 		}
 		quill.on('text-change', saveText);
-	});
+}
+);
 }
 
 /***/ }),
