@@ -88,20 +88,21 @@ if (window.self === window.top) {
 } else {
 	
 	
-	sdk.setContent("<h1>Heading 1</h1><h2>Heading 2</h2><h3>Heading 3</h3><h4>Heading 4</h4><h5>Heading 5</h5><h6>Heading 6</h6>");
-	sdk.getContent(function (content) {
-		var quill = new Quill('#editor-container', {
-			theme: 'snow'
-		});
+	sdk.getContent(function (content) 
+	{
+		var quill = new Quill('#editor-container', {theme: 'snow'});
 		quill.root.innerHTML = content;
-		function saveText() {
+		function saveText() 
+		{
 			var html = quill.root.innerHTML;
 			sdk.setContent(html);
 			sdk.setSuperContent('This is super content: ' + html);
 
-			sdk.getData(function (data) {
+			sdk.getData(function (data) 
+			{
 				var numberOfEdits = data.numberOfEdits || 0;
-				sdk.setData({
+				sdk.setData
+				({
 					numberOfEdits: numberOfEdits + 1
 				});
 			});
