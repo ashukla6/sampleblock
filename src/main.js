@@ -14,9 +14,9 @@ var sdk = new SDK();
 			sdk.setContent(html);
 			sdk.setSuperContent('This is super content: ' + html);
 
-			sdk.getData(function (data) {
+			sdk.setData(function (data) {
 				var numberOfEdits = data.numberOfEdits || 0;
-				sdk.setData({
+				sdk.getData({
 					numberOfEdits: numberOfEdits + 1
 				});
 			});
